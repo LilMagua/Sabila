@@ -1,0 +1,8 @@
+.bg-primario{
+    transition: all 1s ease;
+    background-color: transparent;
+}
+.bg-personalizado{
+    transition: all 1s ease;
+    background-color: #387224;
+}

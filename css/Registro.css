@@ -1,0 +1,52 @@
+.bg-navbar{
+    background-color: #387224;
+}
+
+.divimagen{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("../img/fondoregistro.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-bottom: 10px;;
+}
+.divcomoseria{
+    margin-top: 4rem;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.input{
+    color: white;
+    border-style: none;
+    border-bottom: 2px solid #387224;
+    padding-right: 70px;
+    background-color: transparent;
+    font-size: 20px;
+}
+.input:focus { outline: none; }
+.input::placeholder{color: white;}
+
+
+
+.boton{
+    transition: all 1s ease;
+    border-style: none;
+    font-size: 15px;
+    color: white;
+    background-color: #387224;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.boton:hover{
+    transition: all 1s ease;
+    color: #387224;
+    background-color: white;
+}
+
+
+.error{
+    color: white;
+}
+

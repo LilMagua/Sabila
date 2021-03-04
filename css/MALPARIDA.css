@@ -1,0 +1,209 @@
+/*RENOMBRAR POR "INICIO" */
+/* Css del navbar e imagen de inicio*/
+@media(min-width: 0px) and (max-width: 576px){
+    .texto1{
+        margin-top: 100px;
+        font-size: 25px;
+    }
+    .texto2{
+        font-size: 16px;
+    }
+}
+@media(min-width: 578px) and (max-width: 768px){
+    .texto1{
+        margin-top: 80px;
+        font-size: 30px;
+    }
+    .texto2{
+        font-size: 20px;
+    }
+}
+@media(min-width: 769px) and (max-width: 10000px){
+    .texto1{
+        margin-top: 150px;
+    }
+    .texto2{
+        font-size: 20px;
+    }
+}
+.divimagen1{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("../img/fondoprincipal.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.texto1{
+    color: white;
+}
+.texto2{
+    color: white;
+    margin-top: 2rem;
+}
+.boton1{
+    transition: all 1s ease;
+    border-style: none;
+    font-size: 16px;
+    color: #387224;
+    margin: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top-right-radius: 20px;
+}
+.boton1:hover{
+    transition: all 1s ease;
+    color: white;
+    background-color: #387224;
+}
+
+
+/*Css del Portafolio*/
+
+.portafolio{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.cartaport{
+    border: 3px solid #387224;
+    border-radius: 0%;
+    border-top-right-radius: 20px;
+    padding: 10px;
+}        
+.porttexto1{
+    color: #387224;
+}
+.imagenportafo{
+    border-radius: 100px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+}
+.porttexto2{
+    color: #51843f;
+    font-size: 13px;
+}
+.botonportafolio{
+    border-style: none;
+    color: white;
+    background-color: #004583;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+.botonportafolio:hover{
+    transition: all 1s ease;
+    background-color: #008339;
+}
+
+
+/*Css de quienes somos*/
+.contquien{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("../img/Fondo3.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+
+
+    height: 100vh;
+}
+.textoquien{
+    padding-top: 50px;
+    color: white;
+    padding-bottom: 50px;
+}
+
+.subtitulo{
+    color: white;
+}
+
+.quientex2{
+    color: white;
+    font-size: 16px;
+}
+.cartaquien1{
+    border: none;
+    border-radius: 0%;
+    background-color: transparent;
+}
+
+.cartaquien2{
+    border: none;
+    border-radius: 0%;
+    background-color: transparent;
+}
+
+
+/*Css de Contactanos*/
+.contenedorcontactenos{
+    border: 3px solid #387224;
+    border-top-left-radius: 80px;
+}
+.input{
+    height: 35px;
+    border: 1px solid #387224;
+}
+.input1{
+    width: 490px;
+    height: 35px;
+    border: 1px solid #387224;
+    /*box-shadow: 10px 5px 5px #979797;*/
+}
+.input3{
+    height: 90px;
+    width: 490px;
+    border: 1px solid #387224;
+    /*box-shadow: 10px 5px 5px #979797;*/
+}
+.botoncontactanos{
+    border-style: none;
+    background-color: #004583;
+    color: white;
+    border-top-right-radius: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10rem;
+    transition: all 1s ease;
+}
+.botoncontactanos:hover{
+    background-color:  #387224;
+    transition: all 1s ease;
+}
+
+.infomapa{
+    color: #387224;
+}
+/* cambiar color de los placeholder .input1::placeholder{color: #;}*/
+
+
+
+
+
+.mitad{
+    border-left: 3px solid #387224;
+}
+.mapa{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #387224;
+}
+
+
+.foter{
+    padding: 15px;
+    background-color: #387224;
+}
+.opcionesfooter{
+    color: white;
+    font-size: 20px;
+}
+.opcionesfooter:hover { color: white; }

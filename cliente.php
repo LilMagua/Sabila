@@ -1,11 +1,22 @@
 <?php
-session_start();
+    session_start();
 
-$correo = $_SESSION['correo'];
+    $rol_id = $_SESSION["rol_id"];
 
-if(!isset($correo)){
-    header("location: Ingresar.php");
-}else{
+    if(!isset($rol_id)){
+        header("location: ingresar.php");
+    }else if($rol_id == 1){
+        header("location: admin.php");
+    }else{
+
+    $correo = $_SESSION['correo'];
+    $pass = $_SESSION['pass'];
+    $id = $_SESSION['id'];
+    $nombre = $_SESSION['nombre'];
+    $apellido = $_SESSION['apellido'];
+    $direccion = $_SESSION['direccion'];
+    $telefono = $_SESSION['telefono'];
+    $rol_id = $_SESSION['rol_id'];
 ?>
 
 <!DOCTYPE html>
@@ -19,20 +30,7 @@ if(!isset($correo)){
 </head>
 <body>
 
-<?php
-    include("conexion.php");
 
-    $correo = $_SESSION['correo'];
-    $pass = $_SESSION['pass'];
-    $id = $_SESSION['id'];
-    $nombre = $_SESSION['nombre'];
-    $apellido = $_SESSION['apellido'];
-    $direccion = $_SESSION['direccion'];
-    $telefono = $_SESSION['telefono'];
-    $rol_id = $_SESSION['rol_id'];
-
-
-?>
 
 <!--Inicio del Navbar-->
 <?php
@@ -55,27 +53,34 @@ if(!isset($correo)){
                     <h1 class="text-center mt-5">Mi cuenta</h1>
                     <div class="row">
                         <div class="col-6">
-                            <p class=" texto mt-5 ml-5">Nombre: <?php echo $nombre ?><button class="beditar" name="editnombre"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+                        <p></p>
+                            <p class=" texto mt-5 ml-5">Nombre: <?php echo $nombre ?></p>
 
-                            <p class="texto ml-5">Apellido: <?php echo $apellido ?><button class="beditar" name="editapellido"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+                            <p class="texto ml-5">Apellido: <?php echo $apellido ?></p>
 
-                            <p class="texto ml-5">Correo: <?php echo $correo ?><button class="beditar" name="editcorreo"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+                            <p class="texto ml-5">Correo: <?php echo $correo ?></p>
 
-                            <p class="texto mb-5 ml-5">Pass: <?php echo $pass ?><button class="beditar"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+                            <p class="texto mb-5 ml-5">Contraseña: <?php echo $pass ?></p>
                         </div>
                         <div class="col-6">
-                            <p class="texto mt-5 ">Direccion: <?php echo $direccion ?><button class="beditar"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+                            <p class="texto mt-5 ">Direccion: <?php echo $direccion ?></p>
 
-                            <p class="texto">Telefono: <?php echo $telefono ?> <button class="beditar"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+                            <p class="texto">Telefono: <?php echo $telefono ?></p>
                             <p class="texto">Rol: Cliente</p>
                         </div>
                     </div>
-                    <!--Pedidos -->
-                    <h1 class="text-center mt-5">Pedidos</h1>
-                    <p class=" texto mt-5 ml-5">Pedido: 24/5/2021-Bogota-Suba-Lisboa-2kg Quinua<button class="beditar"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+
                     <center>
-                        <a class="text-center ml-5" href='salir.php'><button class="boton">Salir</button></a>
-                    </center>
+                        <a class="text-center ml-5" href='salir.php'><button class="boton">Cerrar Sesion</button></a>
+
+                        <a class="text-center ml-5" href="actualizar.php?id=<?php echo $id;?>"><button class="boton">Actualizar datos</button></a>
+
+                        <a   class="comoseria text-center ml-5" class href="eliminarcuenta.php?id=<?php echo $id;?>"><button class="boton_eliminar">Eliminar cuenta</button></a>
+
+                        <!--Pedidos -->
+                        <h1 class="text-center mt-5">Pedidos</h1>
+                        <p class=" texto mt-5 ml-5">Pedido: 24/5/2021-Bogota-Suba-Lisboa-2kg Quinua<button class="beditar"> <img src="img/editar.png" width="30px" height="30px" alt=""> </button></p>
+                        </center>
 
                 </div>                
             </div>
@@ -83,6 +88,8 @@ if(!isset($correo)){
         <div class="col-1 asd"></div>
     </div>
 </div>
+
+<script src="confirmar.js"></script>
 
 <style>
 
@@ -115,7 +122,7 @@ if(!isset($correo)){
         color: white;
     }
     .qwe{
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 1);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
     }
@@ -145,13 +152,35 @@ if(!isset($correo)){
     padding-right: 300px;
     margin-bottom: 10px;
     border-radius: 5px;
-}
-.boton:hover{
-    transition: all 1s ease;
-    color: #387224;
-    background-color: white;
-}
+    }
+    .boton:hover{
+        transition: all 1s ease;
+        color: black;
+        background-color: white;
+    }
+
+
+    .boton_eliminar{
+        transition: all 1s ease;
+        border-style: none;
+        font-size: 15px;
+        color: white;
+        background-color: #ff0000;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 300px;
+        padding-right: 300px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .boton_eliminar:hover{
+        transition: all 1s ease;
+        color: #387224;
+        background-color: white;
+    }
 </style>
+
+
 </body>
 </html>
 

@@ -38,7 +38,13 @@
                     $_SESSION['direccion'] = $direccion;
                     $_SESSION['telefono'] = $telefono;
                     $_SESSION['rol_id'] = $rol_id;
-                    header("location: Perfil.php");
+
+                    if($rol_id == 1){
+                        header("location: admin.php");
+                    }else{
+                        header("location: cliente.php");
+                    }
+                    
                 }
 
             }else{

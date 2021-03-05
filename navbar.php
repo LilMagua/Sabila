@@ -22,10 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active mr-5 ml-3" href="index.html">Inicio</a>
-                <a class="nav-item nav-link active mr-5 ml-3" href="index.html">Productos</a>
+                <a class="nav-item nav-link active mr-5 ml-3" href="Catalogo.php">Productos</a>
                 <a class="nav-item nav-link active mr-5 ml-3" href="index.html">¿Quienes Somos?</a>
                 <a class="nav-item nav-link active mr-5 ml-3" href="index.html">Contacto</a>
-                <a class="nav-item nav-link active mr-5 ml-3" href="Perfil.php">Perfil</a>
+                <a class="nav-item nav-link active mr-5 ml-3" href="Ingresar.php">Perfil</a>
             </div>
         </div>
     </nav>

@@ -1,3 +1,18 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['rol_id']) == true){
+        $rol_id = $_SESSION['rol_id'];
+
+        if($rol_id == 1){
+            header("location: admin.php");
+        }else{
+            header("location: cliente.php");
+        }
+    }else{
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,3 +80,7 @@
 
 </body>
 </html>
+
+<?php
+    }
+?>

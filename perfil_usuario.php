@@ -99,7 +99,7 @@
                     <h1 class="text-center mt-5">Pedidos</h1>
 
                         <?php 
-                            $Traer_pedidos = mysqli_query($conexion, "SELECT nombre_producto ,id_productos2,unidades_compradas, precio_unidades_compradas,fecha FROM `Pedidos` INNER JOIN Productos ON Pedidos.id_productos2=Productos.id_productos  WHERE id_usuarios2 = '$id_usuario'"); 
+                            $Traer_pedidos = mysqli_query($conexion, "SELECT nombre_producto ,id_productos2,unidades_compradas, precio_unidades_compradas FROM `Pedidos` INNER JOIN Productos ON Pedidos.id_productos2=Productos.id_productos  WHERE id_usuarios2 = '$id_usuario'"); 
 
                             while($row = mysqli_fetch_assoc($Traer_pedidos)){
                                 $fecha = $row["fecha"];

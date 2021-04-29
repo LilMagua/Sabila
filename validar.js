@@ -69,12 +69,13 @@ formulario.addEventListener("submit", e=>{
         telefono.focus();
         entrar = true;
     }
-    
+    /*
     if(telefono.value.length !== 10){
         errores += "El telefono debe tener 10 digitos <br>";
         telefono.focus();
         entrar = true;
     }
+    */
 
     if(entrar){
         error.innerHTML = errores;

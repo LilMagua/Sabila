@@ -1,7 +1,7 @@
 <?php
     include "conexion.php";
 
-    $Productos = "SELECT * FROM Inventario";
+    $Productos = "SELECT * FROM Productos";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Catalogo.css">
+    <link rel="stylesheet" href="css/csscatalogo.css">
     <link rel="icon" href="img/favicon.ico">
     <title>Catalogo</title>
 </head>
@@ -36,10 +36,11 @@
 <div>     
 <center>
     <button class="boton">
-        <img src="<?php echo $row["Ruta"] ?>" class="imagenproducto" width="150px" height="150px" style="float: left; padding-left: 0px;"  alt="">
+        <img src="<?php echo $row["ruta"] ?>" class="imagenproducto" width="150px" height="150px" style="float: left; padding-left: 0px;"  alt="">
         <div style="width: 320px; height: 150px; float: left;">
-            <h3 class="text-left tituloproducto"><?php echo $row["Producto"] ?></h3>
-            <p class="text-left descripcionproducto"><?php echo $row["Descripcion"] ?></p>    
+            <h3 class="text-left tituloproducto"><?php echo $row["nombre_producto"] ?></h3>
+            <p class="text-left descripcionproducto">Descripcion: <?php echo $row["descripcion"] ?></p>
+            <p class="text-left descripcionproducto">Precio: <?php echo $row["precio"] ?> $</p>    
         </div>
   
               
@@ -48,11 +49,10 @@
 </div>
 
 <center>
-    <a name="quinua" href="producindividual.php?id=<?php echo $row["id"]?>">
-        <button class="botonagregar  mb-5" style="padding-left: 210px; padding-right: 210px;">Comprar</button>
+    <a href='producto_individual.php?id=<?php echo $row["id_productos"]?>'>
+        <button class="botonagregar  mb-5" style="padding-left: 400px; padding-right: 400px;">Comprar</button>
     </a>  
 </center>
-
 
 
 <?php 

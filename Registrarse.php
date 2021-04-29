@@ -1,13 +1,13 @@
 <?php
     session_start();
 
-    if(isset($_SESSION['rol_id']) == true){
-        $rol_id = $_SESSION['rol_id'];
-
-        if($rol_id == 1){
-            header("location: admin.php");
+    if(isset($_SESSION["rol"])){
+        $rol = $_SESSION["rol"];
+        
+        if($rol == 1){
+            header("location: perfil_usuario.php");
         }else{
-            header("location: cliente.php");
+            header("location: perfil_admin.php");
         }
     }else{
 ?>
@@ -31,8 +31,9 @@
 ?>
 
 
+
 <!--Inicio formulario -->
-<form action="valRegistro.php" method="POST" id="formulario">
+<form action="Funciones/valRegistro.php" method="POST" id="formulario">
     <div class="divimagen mt-5">
         <div class="container">
             <div class="row">
@@ -57,11 +58,11 @@
                             <br>
                             <input name="telefono" id="telefono" class="input mt-5" type="text" placeholder="Telefono">
                             <br>
-                            <input name="rol" class="input mt-5" type="text" placeholder="Codigo empresarial">
+                            <input name="pass_admin" class="input mt-5" type="text" placeholder="Administrador (Opcional)">
                         </div>
                     </div>
                     <center>
-                        <input id="enviar" name="enviar" type="submit" class="boton btn-block mt-5">
+                        <input id="enviar" name="Enviar" value="Registrarse" type="submit" class="boton btn-block mt-5">
                         <p id="error" class="error"></p>
                     </center>
                 </div>

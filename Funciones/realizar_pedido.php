@@ -16,7 +16,8 @@
         $unidades_compradas = $row["unidades_compradas"];
         $precio_unidades_compradas =$row["precio_unidades_compradas"];
 
-        $insertar_en_pedido = mysqli_query($conexion,"INSERT INTO `Pedidos`(`id_usuarios2`, `id_productos2`, `unidades_compradas`, `precio_unidades_compradas`, `fecha`) VALUES ('$id_usuario','$id_producto', '$unidades_compradas' , '$precio_unidades_compradas','$fecha')");
+        $insertar_en_pedido = mysqli_query($conexion,"INSERT INTO `Pedidos`(`id_usuarios2`, `id_productos2`, `unidades_compradas`, `precio_unidades_compradas`) VALUES ('$id_usuario','$id_producto', '$unidades_compradas' , '$precio_unidades_compradas')");
+        //Hace falta agregar la fecha, estoy teniendo un problema con la base de datos, no se porque no me recibe la fecha, de momento quitare ese campo de la consulta
         
         if($insertar_en_pedido){
             $eliminar_del_carrito = mysqli_query($conexion,"DELETE FROM `Carrito` WHERE id_usuarios1 = '$id_usuario'");

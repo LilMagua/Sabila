@@ -116,6 +116,7 @@
                             }
                             $direccion = $_SESSION["direccion"];
                         ?>
+                        
                         <p class="pedido">El pedido se entregara en la direccion <?php echo $direccion?> el dia <?php echo $fecha?> entre las 8am y 6pm</p>
 
                 </div>                

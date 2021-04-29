@@ -23,7 +23,11 @@
 
             if($eliminar_del_carrito){
                 header("location: ../perfil_usuario.php");
+            }else{
+                echo "No se logro elminar lo del carro";
             }
+        }else{
+            echo "Los productos no se lograron insertar en el pedido";
         }
     }
 

@@ -28,11 +28,11 @@
             }
         }else{
             echo "Los productos no se lograron insertar en el pedido";
-            echo $id_usuario;
-            echo $id_producto;
-            echo $unidades_compradas;
-            echo $precio_unidades_compradas;
-            echo $fecha;
+            echo $id_usuario +"---";
+            echo $id_producto +"---";
+            echo $unidades_compradas +"---";
+            echo $precio_unidades_compradas +"---";
+            echo $fecha +"---";
         }
     }
 
